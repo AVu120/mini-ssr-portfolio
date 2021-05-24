@@ -4,7 +4,6 @@ import Footer from "../components/common/Footer";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <h1>Homepage</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sed
@@ -18,7 +17,6 @@ export default function Home() {
         perferendis quisquam alias ipsa assumenda, consequuntur id blanditiis
         aliquam totam!
       </p>
-      <Footer />
     </div>
   );
 }
