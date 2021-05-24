@@ -1,7 +1,7 @@
-const about = () => {
+const Projects = () => {
   return (
     <div>
-      <h1>About</h1>
+      <h1>Projects</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sed
         maiores? Nemo beatae minima impedit, iste quo temporibus velit cumque
@@ -18,4 +18,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default Projects;
