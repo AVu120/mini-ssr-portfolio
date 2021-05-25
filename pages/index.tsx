@@ -1,4 +1,4 @@
-import styles from "../styles/pages/Home.module.css";
+import styles from "./Home.module.css";
 import Link from "next/link";
 
 export default function Home() {

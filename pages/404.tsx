@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/pages/404.module.css";
+import styles from "./404.module.css";
 
 const NotFound = () => {
   return (
