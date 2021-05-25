@@ -7,6 +7,7 @@
   --buttonBackgroundColor: #4979ff;
   --websiteBackgroundColor: #f2f2f2;
 }
+
 body {
   background: var(--websiteBackgroundColor);
   color: var(--titleColor);
@@ -47,4 +48,13 @@ footer {
   margin-top: 60px;
   color: var(--textColor);
   border-top: 1px solid var(--dividerBorderColor);
+}
+
+.not_found {
+  text-align: center;
+}
+
+.not_found a {
+  color: var(--buttonBackgroundColor);
+  text-decoration: underline;
 }
