@@ -1,11 +1,10 @@
 .title {
-  color: var(--titleColor);
-  padding-bottom: 20px;
-  text-align: center;
+  composes: title from "./common.module.css";
 }
 .text {
-  color: var(--textColor);
+  composes: text from "./common.module.css";
 }
+
 .btn {
   display: block;
   width: 150px;

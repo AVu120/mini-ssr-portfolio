@@ -1,0 +1,8 @@
+.title {
+  color: var(--titleColor);
+  padding-bottom: 20px;
+  text-align: center;
+}
+.text {
+  color: var(--textColor);
+}

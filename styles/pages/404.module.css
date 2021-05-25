@@ -1,0 +1,8 @@
+.not_found {
+  text-align: center;
+}
+
+.homepage_link {
+  color: var(--buttonBackgroundColor);
+  text-decoration: underline;
+}
