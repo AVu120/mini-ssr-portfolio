@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Head from "next/head";
 import styles from "./404.module.css";
 
 const NotFound = () => {
@@ -24,6 +25,9 @@ const NotFound = () => {
 
   return (
     <div>
+      <Head>
+        <title>Mini Portfolio | Page Not Found</title>
+      </Head>
       <div className={styles.not_found}>
         <h1>Ooooops...</h1>
         <h2>That page cannot be found.</h2>
