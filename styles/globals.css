@@ -11,7 +11,7 @@
 body {
   background: var(--websiteBackgroundColor);
   color: var(--titleColor);
-  font-family: "Nunito";
+  font-family: "Nunito", Helvetica, Arial, Verdana, Tahoma, sans-serif;
 }
 
 a {
