@@ -1,6 +1,7 @@
 import express from "express";
 
 const app = express();
+app.disable("x-powered-by");
 const port = 5000;
 
 app.get("/skills", (req, res) => {
