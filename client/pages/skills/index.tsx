@@ -10,6 +10,7 @@ export const getStaticProps = async () => {
     };
   } catch (error) {
     console.error(error);
+    return {props: {error: error.toString()}};
   }
 };
 
@@ -22,10 +23,11 @@ interface ISkill {
   url: string;
 }
 interface IProps {
-  skills: [ISkill];
+  skills?: ISkill[];
+  error?: string;
 }
 
-const Skills = ({skills}: IProps) => {
+const Skills = ({skills, error}: IProps) => {
   return (
     <>
       <Head>
@@ -33,15 +35,19 @@ const Skills = ({skills}: IProps) => {
       </Head>
       <div>
         <h1 className={styles.title}>Skills</h1>
-        <ul>
-          {skills.map((skill) => (
-            <li key={`skill-${skill.name}-${skill.url}`}>
-              <a href={skill.url}>
-                <h3 className={commonStyles.list_item}>{skill.name}</h3>
-              </a>
-            </li>
-          ))}
-        </ul>
+        {skills ? (
+          <ul>
+            {skills.map((skill) => (
+              <li key={`skill-${skill.name}-${skill.url}`}>
+                <a href={skill.url}>
+                  <h3 className={commonStyles.list_item}>{skill.name}</h3>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <h3>{error}</h3>
+        )}
       </div>
     </>
   );
