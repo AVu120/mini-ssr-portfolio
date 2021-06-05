@@ -8,6 +8,7 @@ const Projects = () => {
         <title>Mini Portfolio | Projects</title>
       </Head>
       <div>
+        <h1 className={styles.title}>Projects</h1>
         <p className={styles.text}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sed
           maiores? Nemo beatae minima impedit, iste quo temporibus velit cumque
