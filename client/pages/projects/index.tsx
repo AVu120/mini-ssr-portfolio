@@ -15,7 +15,6 @@ export const getStaticProps = async () => {
 
 import Head from "next/head";
 import styles from "./Projects.module.css";
-import commonStyles from "../common.module.css";
 
 interface IProject {
   company: string;
