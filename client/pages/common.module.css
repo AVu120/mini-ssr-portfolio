@@ -5,4 +5,5 @@
 }
 .text {
   color: var(--textColor);
+  text-align: center;
 }

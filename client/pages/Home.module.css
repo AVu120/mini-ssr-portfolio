@@ -1,5 +1,6 @@
 .title {
   composes: title from "./common.module.css";
+  padding: 0;
 }
 .text {
   composes: text from "./common.module.css";

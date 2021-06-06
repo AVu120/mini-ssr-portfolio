@@ -11,16 +11,8 @@ export default function Home() {
       <div>
         <h1 className={styles.title}>Homepage</h1>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sed
-          maiores? Nemo beatae minima impedit, iste quo temporibus velit cumque
-          perferendis quisquam alias ipsa assumenda, consequuntur id blanditiis
-          aliquam totam!
-        </p>
-        <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sed
-          maiores? Nemo beatae minima impedit, iste quo temporibus velit cumque
-          perferendis quisquam alias ipsa assumenda, consequuntur id blanditiis
-          aliquam totam!
+          Welcome to a mini-version of my portfolio that I created used Next.js
+          and server-side rendering.
         </p>
         <Link href="/skills">
           <a className={styles.btn}>Check out my skills!</a>
