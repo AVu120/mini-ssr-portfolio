@@ -6,7 +6,3 @@
 .text {
   color: var(--textColor);
 }
-
-.list_item {
-  margin: 0 0 20px;
-}

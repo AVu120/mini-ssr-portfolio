@@ -15,7 +15,6 @@ export const getStaticProps = async () => {
 };
 
 import Head from "next/head";
-import commonStyles from "../common.module.css";
 import styles from "./Skills.module.css";
 
 interface ISkill {
@@ -38,9 +37,12 @@ const Skills = ({skills, error}: IProps) => {
         {skills ? (
           <ul>
             {skills.map((skill) => (
-              <li key={`skill-${skill.name}-${skill.url}`}>
+              <li
+                key={`skill-${skill.name}-${skill.url}`}
+                className={styles.list_item}
+              >
                 <a href={skill.url}>
-                  <h3 className={commonStyles.list_item}>{skill.name}</h3>
+                  <h3 className={styles.list_item_name}>{skill.name}</h3>
                 </a>
               </li>
             ))}

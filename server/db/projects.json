@@ -1,14 +1,16 @@
 [
   {
-    "name": "oOh!media",
-    "company": "Build internal web application.",
-    "achievements": "Software Engineer",
+    "company": "oOh!media",
+    "name": "Build internal web application.",
+    "role": "Software Engineer",
+    "achievements": "Built software",
     "when": "Mar 2021 - Now"
   },
   {
-    "name": "Telstra",
-    "company": "Build internal web application.",
-    "achievements": "Software Engineer",
+    "company": "Telstra",
+    "name": "Build internal web application.",
+    "role": "Software Engineer",
+    "achievements": "Built software",
     "when": "July 2018 - Feb 2021"
   }
 ]

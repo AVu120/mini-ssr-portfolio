@@ -19,7 +19,17 @@ app.get("/skills", (req, res) => {
         );
 });
 
-app.get("/projects", (req, res) => res.send(projects));
+app.get("/projects", (req, res) =>
+  isDataValid(projects)
+    ? res.send(projects)
+    : res
+        .status(500)
+        .send(
+          isEmptyArray(projects)
+            ? "I have no projects."
+            : "Unable to retrieve projects."
+        )
+);
 
 app.get("/experience", (req, res) => res.status(200).send("experience"));
 
