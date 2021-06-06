@@ -45,18 +45,16 @@ const Projects = ({projects, error}: IProps) => {
                 key={`project-${project.company}-${project.name}-${project.when}`}
                 className={styles.list_item}
               >
-                <div>
-                  {Object.keys(project).map((key) => {
-                    const capitalizedKey =
-                      key.charAt(0).toUpperCase() + key.slice(1);
-                    return (
-                      <p>
-                        <b>{`${capitalizedKey}:`}</b>
-                        {` ${project[key]}`}
-                      </p>
-                    );
-                  })}
-                </div>
+                {Object.keys(project).map((key) => {
+                  const capitalizedKey =
+                    key.charAt(0).toUpperCase() + key.slice(1);
+                  return (
+                    <p>
+                      <b>{`${capitalizedKey}:`}</b>
+                      {` ${project[key]}`}
+                    </p>
+                  );
+                })}
               </li>
             ))}
           </ul>

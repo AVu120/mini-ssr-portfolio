@@ -40,7 +40,6 @@ const Experiences = ({experiences, error}: IExperiences) => {
                 key={`experience-${experience.company}-${experience.role}-${experience.when}`}
                 className={styles.list_item}
               >
-                {/* <div> */}
                 {Object.keys(experience).map((key) => {
                   const capitalizedKey =
                     key.charAt(0).toUpperCase() + key.slice(1);
@@ -51,7 +50,6 @@ const Experiences = ({experiences, error}: IExperiences) => {
                     </p>
                   );
                 })}
-                {/* </div> */}
               </li>
             ))}
           </ul>
