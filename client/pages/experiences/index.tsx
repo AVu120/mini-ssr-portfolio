@@ -13,19 +13,10 @@ export const getStaticProps = async () => {
   }
 };
 import Head from "next/head";
+import {IProps} from "../../types/experiences";
 import styles from "./Experiences.module.css";
 
-interface IExperience {
-  company: string;
-  role: string;
-  when: string;
-}
-interface IExperiences {
-  experiences?: IExperience[];
-  error?: string;
-}
-
-const Experiences = ({experiences, error}: IExperiences) => {
+const Experiences = ({experiences, error}: IProps) => {
   return (
     <>
       <Head>

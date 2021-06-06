@@ -14,21 +14,8 @@ export const getStaticProps = async () => {
 };
 
 import Head from "next/head";
+import {IProps} from "../../types/projects";
 import styles from "./Projects.module.css";
-
-interface IProject {
-  company: string;
-  name: string;
-  role: string;
-  achievements: string;
-  when: string;
-}
-
-type IProjectKey = keyof IProject;
-interface IProps {
-  projects?: IProject[];
-  error?: string;
-}
 
 const Projects = ({projects, error}: IProps) => {
   return (

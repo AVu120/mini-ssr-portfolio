@@ -16,16 +16,8 @@ export const getStaticProps = async () => {
 
 import Head from "next/head";
 import Link from "next/link";
+import {IProps} from "../../types/skills";
 import styles from "./Skills.module.css";
-
-interface ISkill {
-  name: string;
-  url: string;
-}
-interface IProps {
-  skills?: ISkill[];
-  error?: string;
-}
 
 const Skills = ({skills, error}: IProps) => {
   return (
