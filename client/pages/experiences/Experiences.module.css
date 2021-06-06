@@ -4,3 +4,12 @@
 .text {
   composes: text from "../common.module.css";
 }
+
+.list_item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.list_item p {
+  margin: 0 0 5px;
+}

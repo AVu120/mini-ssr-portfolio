@@ -13,8 +13,8 @@ const Navbar = () => {
       <Link href="/skills">
         <a>Skills</a>
       </Link>
-      <Link href="/experience">
-        <a>Experience</a>
+      <Link href="/experiences">
+        <a>Experiences</a>
       </Link>
       <Link href="/projects">
         <a>Projects</a>
