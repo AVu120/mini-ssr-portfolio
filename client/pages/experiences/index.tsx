@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
   }
 };
 import Head from "next/head";
-import {IProps} from "../../types/experiences";
+import {TExperienceKey, IProps} from "../../types/experiences";
 import styles from "./Experiences.module.css";
 
 const Experiences = ({experiences, error}: IProps) => {
@@ -37,7 +37,7 @@ const Experiences = ({experiences, error}: IProps) => {
                   return (
                     <p>
                       <b>{`${capitalizedKey}:`}</b>
-                      {` ${experience[key]}`}
+                      {` ${experience[key as TExperienceKey]}`}
                     </p>
                   );
                 })}

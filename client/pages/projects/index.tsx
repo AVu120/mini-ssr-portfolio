@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
 };
 
 import Head from "next/head";
-import {IProps} from "../../types/projects";
+import {TProjectKey, IProps} from "../../types/projects";
 import styles from "./Projects.module.css";
 
 const Projects = ({projects, error}: IProps) => {
@@ -38,7 +38,7 @@ const Projects = ({projects, error}: IProps) => {
                   return (
                     <p>
                       <b>{`${capitalizedKey}:`}</b>
-                      {` ${project[key]}`}
+                      {` ${project[key as TProjectKey]}`}
                     </p>
                   );
                 })}
