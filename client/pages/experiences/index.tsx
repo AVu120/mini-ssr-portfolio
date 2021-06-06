@@ -35,7 +35,9 @@ const Experiences = ({experiences, error}: IProps) => {
                   const capitalizedKey =
                     key.charAt(0).toUpperCase() + key.slice(1);
                   return (
-                    <p>
+                    <p
+                      key={`experience-${experience.company}-${experience.role}-${experience.when}-${capitalizedKey}`}
+                    >
                       <b>{`${capitalizedKey}:`}</b>
                       {` ${experience[key as TExperienceKey]}`}
                     </p>

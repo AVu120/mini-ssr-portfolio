@@ -36,7 +36,9 @@ const Projects = ({projects, error}: IProps) => {
                   const capitalizedKey =
                     key.charAt(0).toUpperCase() + key.slice(1);
                   return (
-                    <p>
+                    <p
+                      key={`project-${project.company}-${project.name}-${project.when}-${capitalizedKey}`}
+                    >
                       <b>{`${capitalizedKey}:`}</b>
                       {` ${project[key as TProjectKey]}`}
                     </p>
