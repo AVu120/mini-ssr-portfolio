@@ -21,28 +21,24 @@ app.get("/skills", (req, res) => {
   }
 });
 
-app.get("/projects", (req, res) =>
-  isDataValid<TProjects>(projects)
-    ? res.send(projects)
-    : res
-        .status(500)
-        .send(
-          isEmptyArray<TProjects>(projects)
-            ? "I have no projects."
-            : "Unable to retrieve projects."
-        )
-);
+app.get("/projects", (req, res) => {
+  if (isDataValid<TProjects>(projects)) res.send(projects);
+  else {
+    const errorMessage = isEmptyArray<TProjects>(projects)
+      ? "I have no projects."
+      : "Unable to retrieve projects.";
+    res.status(500).send(errorMessage);
+  }
+});
 
-app.get("/experiences", (req, res) =>
-  isDataValid<TExperiences>(experiences)
-    ? res.send(experiences)
-    : res
-        .status(500)
-        .send(
-          isEmptyArray<TExperiences>(experiences)
-            ? "I have no experiences."
-            : "Unable to retrieve experiences."
-        )
-);
+app.get("/experiences", (req, res) => {
+  if (isDataValid<TExperiences>(experiences)) res.send(experiences);
+  else {
+    const errorMessage = isEmptyArray<TExperiences>(experiences)
+      ? "I have no experiences."
+      : "Unable to retrieve experiences.";
+    res.status(500).send(errorMessage);
+  }
+});
 
 app.listen(port, () => console.log(`Server is running on port ${port}.`));
