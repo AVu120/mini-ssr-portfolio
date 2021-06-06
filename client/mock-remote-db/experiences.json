@@ -1,0 +1,22 @@
+[
+  {
+    "company": "oOh!media",
+    "role": "Software Engineer",
+    "when": "Mar 2021 - Now"
+  },
+  {
+    "company": "Telstra",
+    "role": "Software Engineer",
+    "when": "July 2018 - Feb 2021"
+  },
+  {
+    "company": "KPMG",
+    "role": "IT Consultant",
+    "when": "Feb 2017 - May 2018"
+  },
+  {
+    "company": "Australia Post",
+    "role": "Postal Officer",
+    "when": "Dec 2012 - Dec 2016"
+  }
+]

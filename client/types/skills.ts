@@ -3,6 +3,7 @@ export interface ISkill {
   url: string;
 }
 
+export type TSkills = ISkill[];
 export interface IProps {
   skills?: ISkill[];
   error?: string;

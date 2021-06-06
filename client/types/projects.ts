@@ -6,6 +6,8 @@ interface IProject {
   when: string;
 }
 
+export type TProjects = IProject[];
+
 export type TProjectKey = keyof IProject;
 export interface IProps {
   projects?: IProject[];

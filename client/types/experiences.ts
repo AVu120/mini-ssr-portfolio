@@ -4,6 +4,7 @@ export interface IExperience {
   when: string;
 }
 
+export type TExperiences = IExperience[];
 export type TExperienceKey = keyof IExperience;
 
 export interface IProps {

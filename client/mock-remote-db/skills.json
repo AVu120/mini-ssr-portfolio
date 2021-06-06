@@ -1,0 +1,18 @@
+[
+  {
+    "name": "JavaScript",
+    "url": "https://www.javascript.com/"
+  },
+  {
+    "name": "TypeScript",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "name": "React",
+    "url": "https://reactjs.org/"
+  },
+  {
+    "name": "Node.js",
+    "url": "https://nodejs.org/"
+  }
+]

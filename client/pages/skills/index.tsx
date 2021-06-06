@@ -1,6 +1,6 @@
 export const getStaticProps = async () => {
   try {
-    const response = await fetch("http://localhost:5000/skills");
+    const response = await fetch("http://localhost:3000/api/skills");
     const data = await response.json();
 
     return {
