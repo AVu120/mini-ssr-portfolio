@@ -7,3 +7,11 @@
   color: var(--textColor);
   text-align: center;
 }
+
+.list_item {
+  display: flex;
+}
+
+.list_item_text_row {
+  margin: 0 0 5px;
+}
