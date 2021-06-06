@@ -41,18 +41,16 @@ const Experiences = ({experiences, error}: IExperiences) => {
                 className={styles.list_item}
               >
                 <div>
-                  <p>
-                    <b>Company:</b>
-                    {` ${experience.company}`}
-                  </p>
-                  <p>
-                    <b>Name:</b>
-                    {` ${experience.role}`}
-                  </p>
-                  <p>
-                    <b>When:</b>
-                    {` ${experience.when}`}
-                  </p>
+                  {Object.keys(experience).map((key) => {
+                    const capitalizedKey =
+                      key.charAt(0).toUpperCase() + key.slice(1);
+                    return (
+                      <p className={styles.list_item_text_row}>
+                        <b>{`${capitalizedKey}:`}</b>
+                        {` ${experience[key]}`}
+                      </p>
+                    );
+                  })}
                 </div>
               </li>
             ))}

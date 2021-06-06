@@ -23,6 +23,8 @@ interface IProject {
   achievements: string;
   when: string;
 }
+
+type IProjectKey = keyof IProject;
 interface IProps {
   projects?: IProject[];
   error?: string;
@@ -44,26 +46,16 @@ const Projects = ({projects, error}: IProps) => {
                 className={styles.list_item}
               >
                 <div>
-                  <p>
-                    <b>Company:</b>
-                    {` ${project.company}`}
-                  </p>
-                  <p>
-                    <b>Name:</b>
-                    {` ${project.name}`}
-                  </p>
-                  <p>
-                    <b>Role:</b>
-                    {` ${project.role}`}
-                  </p>
-                  <p>
-                    <b>Achievements:</b>
-                    {` ${project.achievements}`}
-                  </p>
-                  <p>
-                    <b>When:</b>
-                    {` ${project.when}`}
-                  </p>
+                  {Object.keys(project).map((key) => {
+                    const capitalizedKey =
+                      key.charAt(0).toUpperCase() + key.slice(1);
+                    return (
+                      <p className={styles.list_item_text_row}>
+                        <b>{`${capitalizedKey}:`}</b>
+                        {` ${project[key]}`}
+                      </p>
+                    );
+                  })}
                 </div>
               </li>
             ))}
