@@ -4,7 +4,7 @@ export const getStaticPaths = async () => {
   try {
     const response = await fetch("http://localhost:5000/skills");
     const data = await response.json();
-    const paths = data.map((data: ISkill) => ({params: {name: data.name}}));
+    const paths = data.map((obj: ISkill) => ({params: {name: obj.name}}));
     return {
       paths,
       fallback: false,
