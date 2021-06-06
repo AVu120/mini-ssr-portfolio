@@ -9,7 +9,7 @@
 .btn {
   display: block;
   width: 150px;
-  padding: 8px 0;
+  padding: 8px 5px;
   margin: 20px auto;
   background: var(--buttonBackgroundColor);
   border-radius: 6px;
