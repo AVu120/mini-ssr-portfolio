@@ -3,9 +3,5 @@
 }
 
 .list_item {
-  display: flex;
-}
-
-.list_item_name {
-  margin: 0 0 20px;
+  composes: list_item from "../common.module.css";
 }

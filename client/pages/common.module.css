@@ -9,9 +9,26 @@
 }
 
 .list_item {
-  display: flex;
+  padding: 2px 16px;
+  background: var(--white);
+  display: block;
+  margin: 20px 10px;
+  border-left: 8px solid var(--white);
+  cursor: pointer;
 }
 
-.list_item_text_row {
-  margin: 0 0 5px;
+.list_item p:first-child {
+  margin-bottom: 5px;
+}
+
+.list_item p:nth-child(n + 2):nth-last-child(n + 2) {
+  margin: 5px 0;
+}
+
+.list_item p:last-child {
+  margin-top: 5px;
+}
+
+.list_item:hover {
+  border-left: 8px solid var(--buttonBackgroundColor);
 }

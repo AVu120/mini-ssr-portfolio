@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
 };
 
 import Head from "next/head";
+import Link from "next/link";
 import styles from "./Skills.module.css";
 
 interface ISkill {
@@ -41,9 +42,9 @@ const Skills = ({skills, error}: IProps) => {
                 key={`skill-${skill.name}-${skill.url}`}
                 className={styles.list_item}
               >
-                <a href={skill.url}>
-                  <h3 className={styles.list_item_name}>{skill.name}</h3>
-                </a>
+                <Link href={`/skills/${skill.name}`}>
+                  <h3>{skill.name}</h3>
+                </Link>
               </li>
             ))}
           </ul>

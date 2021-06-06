@@ -1,15 +1,7 @@
 .title {
   composes: title from "../common.module.css";
 }
-.text {
-  composes: text from "../common.module.css";
-}
 
 .list_item {
   composes: list_item from "../common.module.css";
-  margin-bottom: 20px;
-}
-
-.list_item_text_row {
-  composes: list_item_text_row from "../common.module.css";
 }

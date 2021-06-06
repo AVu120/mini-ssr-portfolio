@@ -50,7 +50,7 @@ const Projects = ({projects, error}: IProps) => {
                     const capitalizedKey =
                       key.charAt(0).toUpperCase() + key.slice(1);
                     return (
-                      <p className={styles.list_item_text_row}>
+                      <p>
                         <b>{`${capitalizedKey}:`}</b>
                         {` ${project[key]}`}
                       </p>
