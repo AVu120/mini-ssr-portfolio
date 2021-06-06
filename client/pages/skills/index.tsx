@@ -1,8 +1,8 @@
+// Mocks data fetching from internal/external api.
+import data from "../../mock-remote-db/skills.json";
+
 export const getStaticProps = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/skills");
-    const data = await response.json();
-
     return {
       props: {
         skills: data,

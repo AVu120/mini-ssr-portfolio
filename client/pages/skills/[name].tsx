@@ -1,9 +1,9 @@
 import {ISkill, IContext} from "../../types/skills";
+// Mocks data fetching from internal/external api.
+import data from "../../mock-remote-db/skills.json";
 
 export const getStaticPaths = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/skills");
-    const data = await response.json();
     const paths = data.map((obj: ISkill) => ({params: {name: obj.name}}));
     return {
       paths,
@@ -16,8 +16,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: IContext) => {
   const name = context.params.name;
-  const response = await fetch("http://localhost:3000/api/skills");
-  const data = await response.json();
   const skillData = data.find((obj: ISkill) => obj.name === name);
 
   return {
