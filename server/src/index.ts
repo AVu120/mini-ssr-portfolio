@@ -12,15 +12,13 @@ app.disable("x-powered-by");
 const port = 5000;
 
 app.get("/skills", (req, res) => {
-  isDataValid<TSkills>(skills)
-    ? res.send(skills)
-    : res
-        .status(500)
-        .send(
-          isEmptyArray<TSkills>(skills)
-            ? "I have no skills."
-            : "Unable to retrieve skills."
-        );
+  if (isDataValid<TSkills>(skills)) res.send(skills);
+  else {
+    const errorMessage = isEmptyArray<TSkills>(skills)
+      ? "I have no skills."
+      : "Unable to retrieve skills.";
+    res.status(500).send(errorMessage);
+  }
 });
 
 app.get("/projects", (req, res) =>
