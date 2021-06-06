@@ -14,7 +14,6 @@
   display: block;
   margin: 20px 10px;
   border-left: 8px solid var(--white);
-  cursor: pointer;
 }
 
 .list_item p:first-child {
@@ -27,8 +26,4 @@
 
 .list_item p:last-child {
   margin-top: 5px;
-}
-
-.list_item:hover {
-  border-left: 8px solid var(--buttonBackgroundColor);
 }

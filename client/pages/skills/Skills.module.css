@@ -4,4 +4,9 @@
 
 .list_item {
   composes: list_item from "../common.module.css";
+  cursor: pointer;
+}
+
+.list_item:hover {
+  border-left: 8px solid var(--buttonBackgroundColor);
 }
